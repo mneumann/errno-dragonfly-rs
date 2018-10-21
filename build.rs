@@ -1,5 +1,7 @@
-extern crate gcc;
+extern crate cc;
 
 fn main() {
-    gcc::compile_library("liberrno.a", &["src/errno.c"]);
+    cc::Build::new()
+        .file("src/errno.c")
+        .compile("liberrno.a");
 }
