@@ -9,7 +9,7 @@ keywords = ["dragonfly"]
 include = ["Cargo.toml", "LICENSE", "README.md", "build.rs", "src/lib.rs", "src/errno.c" ]
 
 [dependencies]
-libc = "0.2"
+libc = { version = "0.2", default-features = false }
 
 [build-dependencies]
 gcc = "0.3"
