@@ -1,8 +1,6 @@
 #![no_std]
 
-extern crate libc;
-
-#[link(name="errno", kind="static")]
-extern {
+#[link(name = "errno", kind = "static")]
+extern "C" {
     pub fn errno_location() -> *mut libc::c_int;
 }
